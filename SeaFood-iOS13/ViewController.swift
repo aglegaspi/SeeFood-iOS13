@@ -11,13 +11,21 @@ import CoreML
 import Vision // helps us process images more easily and use images with coreml reducing code
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBOutlet weak var imageViewe: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupImagePicker()
+    }
+    
+    // this tells the delegate the user has picked an image or video
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let userPickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.image = userPickedImage
+        } // get a hold of the image the user has selected
+        imagePicker.dismiss(animated: true, completion: nil)
     }
     
     private func setupImagePicker() {

@@ -36,7 +36,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageViewe" destination="Kpu-ip-Ujr" id="jRt-Mh-dwc"/>
+                        <outlet property="imageView" destination="Kpu-ip-Ujr" id="jRt-Mh-dwc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
