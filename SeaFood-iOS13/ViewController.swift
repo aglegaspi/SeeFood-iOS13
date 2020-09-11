@@ -8,14 +8,17 @@
 
 import UIKit
 import CoreML
-import Vision
+import Vision // helps us process images more easily and use images with coreml reducing code
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var imageViewe: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-
+    @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
+    }
+    
 }
 
