@@ -1,3 +1,5 @@
 #ignore the MLModel file
 Inceptionv3.mlmodel
 *.mlmodel
+
+DS_Store
